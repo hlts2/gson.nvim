@@ -1,14 +1,14 @@
-if exists('g:loaded_gson_viewer')
+if exists('g:loaded_gson')
   finish
 endif
-let g:loaded_gson_viewer = 1
+let g:loaded_gson = 1
 
-function! s:RequireGsonViewer(host) abort
-  return jobstart(['gson-viewer.nvim'], {'rpc': v:true})
+function! s:RequireGson(host) abort
+  return jobstart(['gson.nvim'], {'rpc': v:true})
 endfunction
 
-call remote#host#Register('gson-viewer.nvim', '0', function('s:RequireGsonViewer'))
-call remote#host#RegisterPlugin('gson-viewer.nvim', '0', [
-    \ {'type': 'function', 'name': 'GsonViewer', 'sync': 1, 'opts': {}},
+call remote#host#Register('gson.nvim', '0', function('s:RequireGson'))
+call remote#host#RegisterPlugin('gson.nvim', '0', [
+    \ {'type': 'function', 'name': 'GsonFmt', 'sync': 1, 'opts': {}},
     \ ])
 
