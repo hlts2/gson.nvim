@@ -1,2 +1,2 @@
-# gson-viewer.nvim
-gson-viewer.nvim
+# gson.nvim
+gson.nvim
