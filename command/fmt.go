@@ -6,5 +6,5 @@ import (
 
 // Fmt is json format command
 func (gn *GsonNvim) Fmt(v *nvim.Nvim, args []string) error {
-	return nil
+	return v.WriteOut("hello world")
 }

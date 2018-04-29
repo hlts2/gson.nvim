@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	gn := command.GsonNvim{}
+	gn := &command.GsonNvim{}
 
 	plugin.Main(func(p *plugin.Plugin) error {
 		p.HandleCommand(&plugin.CommandOptions{Name: "GsonFmt"}, gn.Fmt)
