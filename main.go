@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/hlts2/gson-viewer.nvim/command"
+	"github.com/hlts2/gson.nvim/command"
 	"github.com/neovim/go-client/nvim/plugin"
 )
 
