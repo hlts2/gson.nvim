@@ -1,7 +1,7 @@
-if exists('g:loaded_gson-viewer')
+if exists('g:loaded_gson_viewer')
   finish
 endif
-let g:loaded_gson-viewer = 1
+let g:loaded_gson_viewer = 1
 
 function! s:RequireGsonViewer(host) abort
   return jobstart(['gson-viewer.nvim'], {'rpc': v:true})
