@@ -2,6 +2,8 @@ package command
 
 import (
 	"bytes"
+	"errors"
+	"fmt"
 
 	"github.com/hlts2/gson"
 	"github.com/neovim/go-client/nvim"
@@ -13,6 +15,9 @@ func (gn *GsonNvim) Fmt(v *nvim.Nvim, args []string) error {
 	if err != nil {
 		return err
 	}
+
+	str, _ := v.BufferName(vBuf)
+	return errors.New(fmt.Sprint("%v", str))
 
 	reader := nvim.NewBufferReader(v, vBuf)
 
