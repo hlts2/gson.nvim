@@ -42,5 +42,4 @@ Plug 'hlts2/gson.nvim', { 'do': 'make'}
 ```
 
 #### Demo
-[GsonFmt](./demo/gson_fmt.gif)
-
+<img src="./demo/fmt_demo.gif" width="750">
