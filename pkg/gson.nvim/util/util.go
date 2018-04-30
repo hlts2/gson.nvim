@@ -1,4 +1,4 @@
-package gsonnvim
+package util
 
 import (
 	"path/filepath"

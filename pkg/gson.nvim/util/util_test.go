@@ -1,4 +1,4 @@
-package gsonnvim
+package util
 
 import (
 	"testing"
