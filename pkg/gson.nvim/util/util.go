@@ -10,7 +10,10 @@ func IsJSONFile(path string) bool {
 	fileN := filepath.Base(path)
 
 	charCnt := utf8.RuneCountInString(fileN)
-	if charCnt < 5 {
+
+	// The smallest unit constituting the json file
+	// For example, if 「a.json」 is the smallest unit
+	if charCnt < 6 {
 		return false
 	}
 
