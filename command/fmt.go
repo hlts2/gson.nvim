@@ -9,7 +9,7 @@ import (
 )
 
 // Fmt is json format command
-func (gn *GsonNvim) Fmt(v *nvim.Nvim, args []string) error {
+func (gn *GsonNvim) Fmt(v *nvim.Nvim, args []string, rng [2]int) error {
 	vBuf, err := v.CurrentBuffer()
 	if err != nil {
 		return err

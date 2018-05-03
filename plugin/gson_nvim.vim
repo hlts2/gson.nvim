@@ -9,6 +9,6 @@ endfunction
 
 call remote#host#Register('gson.nvim', '0', function('s:RequireGson'))
 call remote#host#RegisterPlugin('gson.nvim', '0', [
-    \ {'type': 'command', 'name': 'GsonFmt', 'sync': 1, 'opts': {}},
+    \ {'type': 'command', 'name': 'GsonFmt', 'sync': 1, 'opts': {'nargs': '?', 'range': '%'}},
     \ ])
 

@@ -9,7 +9,7 @@ func main() {
 	gn := &command.GsonNvim{}
 
 	plugin.Main(func(p *plugin.Plugin) error {
-		p.HandleCommand(&plugin.CommandOptions{Name: "GsonFmt"}, gn.Fmt)
+		p.HandleCommand(&plugin.CommandOptions{Name: "GsonFmt", NArgs: "?", Range: "%"}, gn.Fmt)
 		return nil
 	})
 }
