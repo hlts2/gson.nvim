@@ -4,7 +4,6 @@ import (
 	"bytes"
 
 	"github.com/hlts2/gson"
-	"github.com/hlts2/gson.nvim/pkg/gson.nvim/util"
 	"github.com/neovim/go-client/nvim"
 )
 
@@ -13,11 +12,6 @@ func (gn *GsonNvim) Fmt(v *nvim.Nvim, args []string, rng [2]int) error {
 	vBuf, err := v.CurrentBuffer()
 	if err != nil {
 		return err
-	}
-
-	path, _ := v.BufferName(vBuf)
-	if !util.IsJSONFile(path) {
-		return ErrNotJSONFile
 	}
 
 	reader := nvim.NewBufferReader(v, vBuf)
