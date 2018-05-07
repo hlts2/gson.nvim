@@ -39,7 +39,7 @@ func (gn *GsonNvim) Fmt(v *nvim.Nvim, args []string, rng [2]int) error {
 		return err
 	}
 
-	g, err := gson.NewGsonFromByte(bytes.Join(rangeArea.GetSelectedLines(), CR))
+	g, err := gson.NewGsonFromByte(bytes.Join(rangeArea.SelectedLines, CR))
 	if err != nil {
 		return err
 	}
@@ -52,7 +52,7 @@ func (gn *GsonNvim) Fmt(v *nvim.Nvim, args []string, rng [2]int) error {
 	startLineNum := highlightMark.GetStartLineNum()
 	endLineNum := highlightMark.GetEndLineNum()
 
-	v.SetBufferLines(vBuf, startLineNum-1, endLineNum, true, bytes.Split(append(append(rangeArea.GetUnselectedStartLine(), buf.Bytes()...), rangeArea.GetUnselectedEndLine()...), CR))
+	v.SetBufferLines(vBuf, startLineNum-1, endLineNum, true, bytes.Split(append(append(rangeArea.UnselectedStartLine, buf.Bytes()...), rangeArea.UnselectedEndLine...), CR))
 
 	return nil
 }

@@ -8,9 +8,9 @@ import (
 
 // RangeArea is range lines structor
 type RangeArea struct {
-	selectedLines       [][]byte
-	unselectedStartLine []byte
-	unselectedEndLine   []byte
+	SelectedLines       [][]byte
+	UnselectedStartLine []byte
+	UnselectedEndLine   []byte
 }
 
 // NewRangeArea returns RangeArea instance
@@ -22,16 +22,11 @@ func NewRangeArea(v *nvim.Nvim, buf nvim.Buffer, sMark [2]int, eMark [2]int) (*R
 
 	ra := &RangeArea{}
 
-	ra.unselectedStartLine = getUnselectedStartLine(lines, sMark[1])
-	ra.unselectedEndLine = getUnselectedEndLine(lines, eMark[1])
-	ra.selectedLines = getSelectedLines(lines, sMark, eMark)
+	ra.UnselectedStartLine = getUnselectedStartLine(lines, sMark[1])
+	ra.UnselectedEndLine = getUnselectedEndLine(lines, eMark[1])
+	ra.SelectedLines = getSelectedLines(lines, sMark, eMark)
 
 	return ra, nil
-}
-
-// GetUnselectedStartLine returns unselected start line
-func (ra *RangeArea) GetUnselectedStartLine() []byte {
-	return ra.unselectedStartLine
 }
 
 func getUnselectedStartLine(lines [][]byte, pos int) []byte {
@@ -42,11 +37,6 @@ func getUnselectedStartLine(lines [][]byte, pos int) []byte {
 	return lines[0][:pos]
 }
 
-// GetUnselectedEndLine returns unselected end line
-func (ra *RangeArea) GetUnselectedEndLine() []byte {
-	return ra.unselectedEndLine
-}
-
 func getUnselectedEndLine(lines [][]byte, pos int) []byte {
 	if pos == 0 {
 		return []byte{}
@@ -55,10 +45,6 @@ func getUnselectedEndLine(lines [][]byte, pos int) []byte {
 	endLen := len(lines) - 1
 
 	return lines[endLen][pos:]
-}
-
-func (ra *RangeArea) GetSelectedLines() [][]byte {
-	return ra.selectedLines
 }
 
 func getSelectedLines(lines [][]byte, sMark [2]int, eMark [2]int) [][]byte {
