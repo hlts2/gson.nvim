@@ -42,4 +42,9 @@ Plug 'hlts2/gson.nvim', { 'do': 'make'}
 ```
 
 #### Demo
-<img src="./demo/fmt_demo.gif" width="750">
+<img src="./demo/fmt_demo_1.gif" width="750">
+
+- Format JSON of selection
+
+### Demo
+<img src="./demo/fmt_demo_2.gif" width="750">
