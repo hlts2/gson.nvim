@@ -54,9 +54,7 @@ func getUnselectedEndLine(lines [][]byte, pos int) []byte {
 
 	endLen := len(lines) - 1
 
-	nextPos := getNextPos(lines[endLen], pos)
-
-	return lines[endLen][nextPos:]
+	return lines[endLen][pos:]
 }
 
 func (ra *RangeArea) GetSelectedLines() [][]byte {
