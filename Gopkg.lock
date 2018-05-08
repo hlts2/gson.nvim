@@ -3,13 +3,25 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/hlts2/gson"
+  packages = ["."]
+  revision = "d117ca05c0d837cad27a8c1c16e3d3ec939ca47b"
+
+[[projects]]
+  branch = "master"
   name = "github.com/neovim/go-client"
   packages = ["msgpack","msgpack/rpc","nvim","nvim/plugin"]
   revision = "9ff6dbd3a83f86119a14095c3635eb77ffa7bc90"
 
+[[projects]]
+  branch = "master"
+  name = "github.com/pquerna/ffjson"
+  packages = ["ffjson","fflib/v1","fflib/v1/internal"]
+  revision = "d49c2bc1aa135aad0c6f4fc2056623ec78f5d5ac"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "5c6b1deddb0b24d87e921cd4be4e61098c98c64190b075ca9eb1e761da10b0a6"
+  inputs-digest = "29ee52a451a3f0fef797d4d9198fe6cbf131cb643f35fcade4d76a862ddac5b9"
   solver-name = "gps-cdcl"
   solver-version = 1
