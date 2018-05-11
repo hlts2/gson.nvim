@@ -1,5 +1,7 @@
 # gson.nvim
 
+[![Join the chat at https://gitter.im/hlts2/gson.nvim](https://badges.gitter.im/hlts2/gson.nvim.svg)](https://gitter.im/hlts2/gson.nvim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 gson.nvim is a Vim Plugin for JSON.
 
 ## Require
